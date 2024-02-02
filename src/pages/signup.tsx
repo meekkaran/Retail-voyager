@@ -1,4 +1,5 @@
 import * as React from 'react';
+import MuiLink from '@mui/material/Link';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -27,8 +28,7 @@ export default function SignUp() {
 
   return (
     <div>
-      <CssBaseline />
-      <Header />
+      {/* <Header /> */}
       <Container component="main" maxWidth="xs">
         <Box sx={{ marginTop: 8, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           <Avatar sx={{ m: 1, bgcolor: '#4CAF50' }}><LockOutlinedIcon /></Avatar>
@@ -53,9 +53,9 @@ export default function SignUp() {
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
-                <Link href="#" variant="body2" sx={{ color: '#4CAF50', '&:hover': { color: '#45a049' } }}>
+                <MuiLink href="login" variant="body2" sx={{ color: '#4CAF50', '&:hover': { color: '#45a049' } }}>
                   Already have an account? Sign in
-                </Link>
+                </MuiLink>
               </Grid>
             </Grid>
           </Box>

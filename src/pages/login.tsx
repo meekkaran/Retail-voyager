@@ -1,11 +1,13 @@
 import * as React from 'react';
+import Link from 'next/link';
+import MuiLink from '@mui/material/Link';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
-import Link from '@mui/material/Link';
+// import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
@@ -25,8 +27,7 @@ export default function SignIn() {
 
   return (
     <div>
-      <CssBaseline />
-      <Header />
+      {/* <Header /> */}
       <Container component="main" maxWidth="xs">
         <Box sx={{ marginTop: 8, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           <Typography component="h1" variant="h5" sx={{ color: '#4CAF50' }}>RETAIL VOYAGER</Typography>
@@ -41,10 +42,10 @@ export default function SignIn() {
             </Button>
             <Grid container>
               <Grid item xs>
-                <Link href="#" variant="body2" sx={{ color: '#4CAF50', '&:hover': { color: '#45a049' } }}>Forgot password?</Link>
+                <MuiLink href="#" variant="body2" sx={{ color: '#4CAF50', '&:hover': { color: '#45a049' } }}>Forgot password?</MuiLink>
               </Grid>
               <Grid item>
-                <Link href="#" variant="body2" sx={{ color: '#4CAF50', '&:hover': { color: '#45a049' } }}>{"Don't have an account? Sign Up"}</Link>
+                <MuiLink href="signup" variant="body2" sx={{ color: '#4CAF50', '&:hover': { color: '#45a049' } }}>{"Don't have an account? Sign Up"}</MuiLink>
               </Grid>
             </Grid>
           </Box>
