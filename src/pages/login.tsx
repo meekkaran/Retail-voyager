@@ -31,8 +31,8 @@ export default function SignIn() {
       <Container component="main" maxWidth="xs">
         <Box sx={{ marginTop: 8, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           <Typography component="h1" variant="h5" sx={{ color: '#4CAF50' }}>RETAIL VOYAGER</Typography>
-          <Avatar sx={{ m: 1, bgcolor: '#4CAF50' }}><LockOutlinedIcon /></Avatar>
-          <Typography component="h1" variant="h5" sx={{ color: '#4CAF50' }}>Sign in</Typography>
+          <Typography component="h1" variant="h5" sx={{ color: '#000' }}>Welcome Back!</Typography>
+          <Typography component="h1" variant="h5" sx={{ color: '#000' }}>Login to your Account</Typography>
           <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
             <TextField margin="normal" required fullWidth id="email" label="Email Address" name="email" autoComplete="email" autoFocus />
             <TextField margin="normal" required fullWidth name="password" label="Password" type="password" id="password" autoComplete="current-password" />
@@ -43,9 +43,6 @@ export default function SignIn() {
             <Grid container>
               <Grid item xs>
                 <MuiLink href="#" variant="body2" sx={{ color: '#4CAF50', '&:hover': { color: '#45a049' } }}>Forgot password?</MuiLink>
-              </Grid>
-              <Grid item>
-                <MuiLink href="signup" variant="body2" sx={{ color: '#4CAF50', '&:hover': { color: '#45a049' } }}>{"Don't have an account? Sign Up"}</MuiLink>
               </Grid>
             </Grid>
           </Box>
