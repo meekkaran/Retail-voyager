@@ -10,11 +10,9 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 const Header: React.FC = () => {
   return (
-    <AppBar position="static" sx={{ backgroundColor: 'white', boxShadow: '0px 3px 5px rgba(0, 0, 0, 0.2)', margin: 0 }}>
+    <AppBar position="static" sx={{ backgroundColor: 'white', boxShadow: '0px 3px 5px rgba(0, 0, 0, 0.2)', margin: 0, width: '100%' }}>
       <Toolbar style={{ padding: 0 }}>
-        {/* Left side: Company Logo and Name */}
         <div style={{ display: 'flex', alignItems: 'center', marginRight: 'auto' }}>
-          {/* Add your company logo here */}
           <img src="/images/Saf-logo.svg" alt="Company Logo" style={{ marginRight: '10px' }} />
           <Typography variant="h6" component="div">
             <span style={{ color: 'black', fontWeight: 'bold' }}>Retail </span>

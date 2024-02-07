@@ -51,47 +51,49 @@ const Home: React.FC = () => {
   return (
     <div>
       <Header />
-      <TableContainer component={Paper}>
-        <Table>
-          <TableHead>
-            <TableRow>
-              <TableCell>PHONE NUMBER</TableCell>
-              <TableCell>Name</TableCell>
-              <TableCell>Description</TableCell>
-              <TableCell>Field 1</TableCell>
-              <TableCell>Field 2</TableCell>
-              <TableCell>Field 3</TableCell>
-              <TableCell>Actions</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {slicedData.map((row) => (
-              <TableRow key={row.contact}>
-                <TableCell>{row.contact}</TableCell>
-                <TableCell>{row.name}</TableCell>
-                <TableCell>{row.description}</TableCell>
-                <TableCell>{row.field1}</TableCell>
-                <TableCell>{row.field2}</TableCell>
-                <TableCell>{row.field3}</TableCell>
-                <TableCell>
-                  <Button variant="contained" color="success">
-                    View
-                  </Button>
-                </TableCell>
+      <div style={{ paddingTop: '100px', textAlign: 'center' }}>
+        <TableContainer component={Paper}>
+          <Table>
+            <TableHead>
+              <TableRow>
+                <TableCell>ID</TableCell>
+                <TableCell>Name</TableCell>
+                <TableCell>Description</TableCell>
+                <TableCell>Field 1</TableCell>
+                <TableCell>Field 2</TableCell>
+                <TableCell>Field 3</TableCell>
+                <TableCell>Actions</TableCell>
               </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-        <TablePagination
-          rowsPerPageOptions={[6]}
-          component="div"
-          count={fetchedData.length}
-          rowsPerPage={rowsPerPage}
-          page={page}
-          onPageChange={handleChangePage}
-          onRowsPerPageChange={handleChangeRowsPerPage}
-        />
-      </TableContainer>
+            </TableHead>
+            <TableBody>
+              {slicedData.map((row) => (
+                <TableRow key={row.contact}>
+                  <TableCell>{row.contact}</TableCell>
+                  <TableCell>{row.name}</TableCell>
+                  <TableCell>{row.description}</TableCell>
+                  <TableCell>{row.field1}</TableCell>
+                  <TableCell>{row.field2}</TableCell>
+                  <TableCell>{row.field3}</TableCell>
+                  <TableCell>
+                    <Button variant="contained" color="success">
+                      View
+                    </Button>
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </div>
+      <TablePagination
+        rowsPerPageOptions={[6]}
+        component="div"
+        count={fetchedData.length}
+        rowsPerPage={rowsPerPage}
+        page={page}
+        onPageChange={handleChangePage}
+        onRowsPerPageChange={handleChangeRowsPerPage}
+      />
     </div>
   );
 };
