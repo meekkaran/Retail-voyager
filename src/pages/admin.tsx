@@ -55,7 +55,7 @@ const Dashboard: React.FC = () => {
       >
         <Toolbar />
         <List>
-          {['Dashboard', 'Item 1', 'Item 2', 'Item 3'].map((item, index) => (
+          {['Dashboard', 'Users', 'Retailers', 'Settings'].map((item, index) => (
             <ListItem
               button
               key={item}
@@ -69,16 +69,18 @@ const Dashboard: React.FC = () => {
       </Drawer>
 
       {/* Main Content */}
-      <Container
-        component="main"
-        sx={{ flexGrow: 1, p: 3, paddingTop: 64 }}
-      >
+      <Container component="main" sx={{ flexGrow: 1, p: 3, paddingTop: 64 }}>
         <Toolbar />
         {/* Display Content based on selected item */}
-        <Typography variant="h5" gutterBottom>
-          {selectedItem}
-        </Typography>
-        {/* Add your content here */}
+        {selectedItem === 'Dashboard' && (
+          <Typography variant="h5" gutterBottom> Dashboard Content</Typography>)}
+        {selectedItem === 'Users' && (
+          <Typography variant="h5" gutterBottom> Users Content</Typography>)}
+        {selectedItem === 'Retailers' && (
+          <Typography variant="h5" gutterBottom>Retailers Content</Typography>)}
+        {selectedItem === 'Settings' && (
+          <Typography variant="h5" gutterBottom>Settings Content</Typography>
+)}
       </Container>
     </div>
   );
