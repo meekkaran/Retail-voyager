@@ -1,4 +1,4 @@
-// pages/dashboard.tsx
+
 import React, { useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
@@ -55,7 +55,7 @@ const Dashboard: React.FC = () => {
       >
         <Toolbar />
         <List>
-          {['Dashboard', 'Users', 'Retailers', 'Settings'].map((item, index) => (
+          {['Dashboard', 'Users', 'Retail centres', 'Rating criteria'].map((item, index) => (
             <ListItem
               button
               key={item}
@@ -68,18 +68,18 @@ const Dashboard: React.FC = () => {
         </List>
       </Drawer>
 
-      {/* Main Content */}
+      {/* Main  */}
       <Container component="main" sx={{ flexGrow: 1, p: 3, paddingTop: 64 }}>
         <Toolbar />
-        {/* Display Content based on selected item */}
+        
         {selectedItem === 'Dashboard' && (
-          <Typography variant="h5" gutterBottom> Dashboard Content</Typography>)}
+          <Typography variant="h5" gutterBottom> Dashboard </Typography>)}
         {selectedItem === 'Users' && (
-          <Typography variant="h5" gutterBottom> Users Content</Typography>)}
+          <Typography variant="h5" gutterBottom> Users </Typography>)}
         {selectedItem === 'Retailers' && (
-          <Typography variant="h5" gutterBottom>Retailers Content</Typography>)}
+          <Typography variant="h5" gutterBottom>Retailer centers </Typography>)}
         {selectedItem === 'Settings' && (
-          <Typography variant="h5" gutterBottom>Settings Content</Typography>
+          <Typography variant="h5" gutterBottom>Settings </Typography>
 )}
       </Container>
     </div>

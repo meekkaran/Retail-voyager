@@ -20,7 +20,7 @@ const Header: React.FC = () => {
           </Typography>
         </div>
 
-        {/* Middle: Search Field */}
+        
         <div style={{ display: 'flex', alignItems: 'center', margin: '0 auto' }}>
           <TextField
             id="outlined-basic" label="Search" variant="outlined" size="small"
@@ -36,12 +36,11 @@ const Header: React.FC = () => {
           />
         </div>
 
-        {/* Right side: Account Icon and Name (displayed when logged in) */}
-        {/* For simplicity, I'm using a static Account Name. You should replace it with dynamic data when a user logs in */}
+  
         <div style={{ display: 'flex', alignItems: 'center', marginLeft: 'auto' }}>
           <AccountCircleIcon sx={{ marginRight: '8px', color: 'black' }} />
           <Typography variant="subtitle1" component="div" sx={{ color: 'black' }}>
-            John Doe {/* Replace with the dynamic user name */}
+            John Doe 
           </Typography>
         </div>
       </Toolbar>

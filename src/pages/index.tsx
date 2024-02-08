@@ -13,7 +13,7 @@ interface Row {
 }
 
 const Home: React.FC = () => {
-  // Dummy data for demonstration purposes
+  // Dummy data 
   const fetchedData: Row[] = [
     { contact: '0710203040501', name: 'Meek A', description: 'Gender A', field1: 'Value X', field2: 'Value Y', field3: 'Value Z' },
     { contact: '0710203040501', name: 'Meek B', description: 'Gender B', field1: 'Value X', field2: 'Value Y', field3: 'Value Z' },
@@ -25,26 +25,23 @@ const Home: React.FC = () => {
     { contact: '0710203040501', name: 'Meek H', description: 'Gender H', field1: 'Value X', field2: 'Value Y', field3: 'Value Z' },
     { contact: '0710203040501', name: 'Meek I', description: 'Gender I', field1: 'Value X', field2: 'Value Y', field3: 'Value Z' },
     { contact: '0710203040501', name: 'Meek J', description: 'Gender J', field1: 'Value X', field2: 'Value Y', field3: 'Value Z' },
-    // ... Repeat the same data for more rows
+    
   ];
 
-  // Pagination state
+
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(6);
 
-  // Function to handle page change
   const handleChangePage = (event: unknown, newPage: number) => {
     setPage(newPage);
   };
 
-  // Function to handle rows per page change
-  const handleChangeRowsPerPage = (event: React.ChangeEvent<HTMLInputElement>) => {
+   const handleChangeRowsPerPage = (event: React.ChangeEvent<HTMLInputElement>) => {
     setRowsPerPage(parseInt(event.target.value, 10));
     setPage(0);
   };
 
-  // Calculate the current page's data
-  const startIndex = page * rowsPerPage;
+   const startIndex = page * rowsPerPage;
   const endIndex = startIndex + rowsPerPage;
   const slicedData = fetchedData.slice(startIndex, endIndex);
 
